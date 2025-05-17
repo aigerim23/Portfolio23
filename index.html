@@ -543,6 +543,7 @@
                 document.querySelectorAll('.lang').forEach((el) => {
                     el.style.display = el.getAttribute('lang') === lang ? 'inline' : 'none';
                 });
+                AOS.refresh();
             }
 
             document.addEventListener('DOMContentLoaded', () => setLang('ru'));
