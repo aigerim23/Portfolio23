@@ -32,3 +32,42 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+
+function setLang(lang) {
+  const langNames = {
+    ru: 'RU',
+    kk: 'KZ',
+    en: 'EN',
+    de: 'DE'
+  };
+
+  // переключение текста
+  const btn = document.getElementById('currentLang');
+  if (btn && langNames[lang]) {
+    btn.textContent = langNames[lang] + ' ▼';
+  }
+
+  // отображение текста нужного языка
+document.querySelectorAll('.lang').forEach(el => {
+  el.classList.remove('active-lang');
+  if (el.getAttribute('lang') === lang) {
+    el.classList.add('active-lang');
+  }
+});
+
+
+  AOS.refresh();
+}
+  document.addEventListener('DOMContentLoaded', () => setLang('ru'));
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const btn = document.getElementById('toggleSkills');
+    const block = document.getElementById('skillsContent');
+
+    if (btn && block) {
+      btn.addEventListener('click', () => {
+        block.classList.toggle('expanded');
+        btn.textContent = block.classList.contains('expanded') ? 'Скрыть' : 'Показать больше';
+      });
+    }
+  });

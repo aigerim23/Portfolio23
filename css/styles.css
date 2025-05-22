@@ -10893,7 +10893,7 @@ p.lead {
     flex-direction: column;
     width: 30rem;
     height: 100vh;
-    background-image: url("../assets/img/kobiz.jpg");
+    background-image: url("../assets/img/standup2.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -10934,7 +10934,7 @@ p.lead {
     background-color: rgba(0, 0, 0, 0.3);
     transition: background-color 0.3s ease;
     color: white;
-    text-shadow: 0 0 3px #fff;
+    text-shadow: 0 0 5px #8B1E1E;
   }
 }
 .social-icons .social-icon {
@@ -11045,4 +11045,193 @@ section.resume-section .resume-section-content {
      object-fit: contain;
   background-color: #F5EAD6;
   display: block;
+}
+
+/* Только для мобильных */
+@media (max-width: 768px) {
+  .about-mobile-bg {
+    background-image: url("../assets/img/standup2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 20px;
+    max-height: 500px; /* <--- Ограничение высоты */
+    overflow: hidden;
+    font-size: 14px; /* 👈 Уменьшенный размер шрифта */
+    line-height: 1.4; /* Рекомендуется для читаемости */
+  }
+  .about-description {
+    display: none;
+  }
+  .about-mobile-bg h1, .about-mobile-bg .h1,
+  .about-mobile-bg h2,
+  .about-mobile-bg .h2,
+  .about-mobile-bg h3,
+  .about-mobile-bg .h3 {
+    font-size: 18px; /* 👈 Уменьшаем заголовки */
+  }
+  .about-mobile-bg p {
+    font-size: 14px;
+  }
+  .about-mobile-bg .resume-section-content {
+    padding: 15px;
+    border-radius: 12px;
+  }
+  .bottom-content {
+    padding-bottom: 20px;
+  }
+  .resume-section-content {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .subheading {
+    word-break: break-word;
+    font-size: 16px;
+  }
+  h1.mb-0, .mb-0.h1 {
+    font-size: 28px;
+    line-height: 1.3;
+  }
+  .about-description {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  .about-header {
+    margin-top: auto;
+    padding-top: 45vh;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .about-overlay {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 12px;
+    padding: 1rem;
+    text-align: center;
+  }
+  .about-overlay h1, .about-overlay .h1,
+  .about-overlay .subheading,
+  .about-overlay a {
+    color: white;
+    text-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
+  }
+  .about-header h1, .about-header .h1,
+  .about-header .subheading {
+    color: white;
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+  }
+}
+.lang {
+  display: none !important;
+}
+
+.lang.active-lang {
+  display: inline !important;
+}
+
+h1 .lang.active-lang, .h1 .lang.active-lang,
+p .lang.active-lang,
+.subheading .lang.active-lang,
+.text-primary .lang.active-lang {
+  display: block !important;
+}
+
+.name-line {
+  white-space: normal;
+}
+@media (min-width: 992px) {
+  .name-line {
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 576px) {
+  .carousel-item img, video {
+    max-height: 250px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+@media (max-width: 768px) {
+  #skills {
+    font-size: 0.85rem;
+  }
+  #skills h4, #skills .h4 {
+    font-size: 0.95rem;
+  }
+  #skills ul.fa-ul {
+    font-size: 0.85rem;
+  }
+  #skills ul.fa-ul li {
+    line-height: 1.5;
+  }
+}
+@media (max-width: 768px) {
+  .collapsible-skills {
+    max-height: 400px;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+  .collapsible-skills.expanded {
+    max-height: 2000px;
+  }
+}
+@media (max-width: 768px) {
+  #education {
+    font-size: 0.85rem;
+    line-height: 1.3;
+  }
+  #education h3, #education .h3,
+  #education h4,
+  #education .h4,
+  #education .subheading {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+  }
+  #education .education-icon {
+    font-size: 1rem;
+    margin-right: 0.25rem;
+  }
+  #education .mb-5 {
+    margin-bottom: 1.5rem !important;
+  }
+  #education .mb-3 {
+    margin-bottom: 0.75rem !important;
+  }
+  #education .resume-section-content {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+.bg-tgame {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  color: white;
+}
+
+.bg-tgame h4, .bg-tgame .h4,
+.bg-tgame p {
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-image: none !important;
+  width: 2rem;
+  height: 2rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  -webkit-mask-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 16 16'%3E%3Cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3E%3C/svg%3E");
+          mask-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 16 16'%3E%3Cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3E%3C/svg%3E");
+  -webkit-mask-size: contain;
+          mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+          mask-position: center;
+}
+
+.carousel-control-next-icon {
+  transform: rotate(180deg);
 }
