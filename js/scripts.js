@@ -67,7 +67,14 @@ document.querySelectorAll('.lang').forEach(el => {
     if (btn && block) {
       btn.addEventListener('click', () => {
         block.classList.toggle('expanded');
-        btn.textContent = block.classList.contains('expanded') ? 'Скрыть' : 'Показать больше';
+        const langSpans = btn.querySelectorAll('.lang');
+langSpans.forEach(span => {
+  const isExpanded = block.classList.contains('expanded');
+  span.textContent = isExpanded
+    ? span.getAttribute('data-close')
+    : span.getAttribute('data-open');
+});
+
       });
     }
   });
